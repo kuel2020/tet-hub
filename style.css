@@ -1,0 +1,104 @@
+/* ---------- Base ---------- */
+:root{
+  --ink:#371125;
+  --surface:#2A1D31;
+  --line:#3A2C42;
+  --cream:#F6EFE9;
+  --muted:#CBBFD0;
+  --blush:#E8B4A0;
+  --gold:#E2B857;
+  --gold-hover:#F0CB75;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:Inter,sans-serif}
+a{color:var(--blush)}
+a:hover{color:#fff}
+h1,h2,h3,.logo,.price{font-family:'Playfair Display',serif}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.row{display:flex;flex-wrap:wrap;gap:24px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;
+  font-family:Inter,sans-serif;font-size:16px;font-weight:600;text-decoration:none;
+  border-radius:999px;border:2px solid transparent;cursor:pointer}
+.btn-vip{background:var(--gold);color:var(--ink)}
+.btn-vip:hover{background:var(--gold-hover);color:var(--ink)}
+.btn-free{background:transparent;color:var(--cream);border-color:var(--blush)}
+.btn-free:hover{background:#2F2236;color:var(--cream)}
+
+/* ---------- Header ---------- */
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{font-size:24px;font-weight:700}
+.nav-links{display:flex;gap:32px;font-size:15px}
+.nav-links a{color:var(--muted);text-decoration:none}
+.nav-links a:hover{color:#fff}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:72px;padding-bottom:96px;text-align:center}
+.badge-outline{display:inline-block;padding:8px 18px;border:1px solid var(--gold);border-radius:999px;
+  color:var(--gold);font-size:14px;font-weight:600;letter-spacing:.08em}
+.hero h1{font-size:68px;line-height:1.08;margin:28px auto 20px;max-width:880px}
+.lead{font-size:19px;line-height:1.6;color:var(--muted);max-width:640px;margin:0 auto 36px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+
+/* ---------- Courses ---------- */
+.courses{background:var(--cream);color:var(--ink);padding:88px 0}
+h2{font-size:42px;margin:0 0 12px}
+.section-sub{font-size:17px;line-height:1.6;color:#4A3D52;margin:0 0 40px;max-width:560px}
+.track{flex:1 1 300px;background:#fff;border-radius:16px;padding:32px}
+.track-label{font-size:13px;font-weight:600;letter-spacing:.08em;color:#8A4A33}
+.track h3{font-size:26px;margin:10px 0}
+.track p{margin:0;line-height:1.6;color:#4A3D52}
+
+/* ---------- Plans ---------- */
+.plans{padding-top:88px;padding-bottom:88px}
+.plans h2{text-align:center}
+.section-sub.light{color:var(--muted);margin:0 auto 48px;text-align:center}
+.plan-row{justify-content:center;align-items:stretch}
+.plan{flex:1 1 300px;max-width:460px;background:var(--surface);border-radius:20px;padding:40px;
+  display:flex;flex-direction:column;gap:20px;border:2px solid transparent}
+.plan-vip{border-color:var(--gold)}
+.plan-top{display:flex;justify-content:space-between;align-items:center}
+.plan-name{font-size:14px;font-weight:600;letter-spacing:.08em}
+.free-name{color:var(--blush)}
+.vip-name{color:var(--gold)}
+.badge-solid{background:var(--gold);color:var(--ink);font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px}
+.price{font-size:48px;font-weight:700}
+.seats{margin:0;color:var(--muted);font-size:15px}
+.plan ul{margin:0;padding-left:20px;line-height:2}
+.plan .btn{margin-top:auto}
+
+/* ---------- Footer ---------- */
+.footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted);font-size:14px}
+
+/* ---------- Mobile ---------- */
+@media (max-width:700px){
+  .hero h1{font-size:40px}
+  h2{font-size:32px}
+  .nav-links{display:none}
+  .plan{padding:28px}
+}
+
+/* ---------- Sign-up form ---------- */
+.signup{padding-top:0;padding-bottom:96px}
+.signup-card{max-width:640px;margin:0 auto;background:var(--surface);border-radius:20px;padding:48px 40px}
+.signup-card h2{text-align:center}
+.signup-card .section-sub{margin-bottom:32px}
+.field{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.field label,.plan-choice legend{font-size:15px;font-weight:600}
+.field input,.field select{min-height:48px;padding:0 16px;font:inherit;font-size:16px;color:var(--cream);
+  background:var(--ink);border:1px solid #5A4A63;border-radius:12px}
+.field input:focus,.field select:focus,.choice input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.field input[aria-invalid="true"]{border-color:#FF9B8A}
+.plan-choice{border:0;padding:0;margin:0 0 24px;display:flex;flex-wrap:wrap;gap:16px}
+.plan-choice legend{padding:0;margin-bottom:12px;width:100%}
+.choice{flex:1 1 220px;display:flex;gap:12px;align-items:flex-start;padding:16px;cursor:pointer;
+  border:1px solid #5A4A63;border-radius:12px}
+.choice:has(input:checked){border-color:var(--gold);background:#33243B}
+.choice input{margin-top:4px;accent-color:var(--gold);width:18px;height:18px}
+.choice span{display:flex;flex-direction:column;gap:4px}
+.choice small{color:var(--muted);font-size:14px}
+.form-message{min-height:24px;margin:0 0 16px;font-size:15px;color:#FF9B8A}
+.form-message.ok{color:var(--gold);font-size:17px;font-weight:600}
+.submit{width:100%}
+@media (max-width:700px){.signup-card{padding:32px 20px}}
